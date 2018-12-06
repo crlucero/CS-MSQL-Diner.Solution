@@ -1,0 +1,14 @@
+<h1>To Do List</h1>
+<hr>
+
+<h2>Edit joint: @Model["joint"].GetName()</h2>
+
+<form action='/cuisines/@Model["cuisine"].GetId()/joints/@Model["joint"].GetId()' method="post">
+  <label for="newName">Name:</label>
+  <input type="text" name="newName" value='@Model["joint"].GetName()'>
+  <label for="newNotes">Notes:</label>
+  <input type="text" name="newNotes" value='@Model["joint"].GetNotes()'>
+  <button type="submit">Edit</button>
+</form>
+
+<h4><a href='/cuisines/@Model["cuisine"].GetId()/joints/@Model["joint"].GetId()'>Return to previous page</a></h4>

@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+
+<h1>Add a new joint to @Model.GetName()</h1>
+
+<form action='/cuisines/@Model.GetId()' method='post'>
+  <input id='cuisineId' name='cuisineId' type='hidden' value='@Model.GetId()'>
+  
+  <label for='jointName'>Name of joint</label>
+  <input id='jointName' name='jointName' type='text'>
+  
+  <label for='jointNotes'>Notes on the joint</label>
+  <input id='jointNotes' name='jointNotes' type='text'>
+  
+  <button type='submit'>Add your desired joint!</button>
+</form>
+
+</div>

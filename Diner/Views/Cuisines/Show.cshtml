@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+
+<h3>Here are all the Joints in the @Model["cuisine"].GetName() category:</h3>
+
+@if (@Model["joints"].Count == 0)
+{
+  <h4>No joints have been added yet!</h4>
+}
+
+<ol>
+@foreach (var joint in @Model["joints"])
+{
+  <li><a href='/cuisines/@Model["cuisine"].GetId()/joints/@joint.GetId()'>@joint.GetName()</a></li>
+}
+</ol>
+
+<p><a href='/cuisines/@Model["cuisine"].GetId()/joints/new'>Add a new joint!</a></p>
+<p><a href='/cuisines/@Model["cuisine"].GetId()/delete'>Delete this cuisine and it's content.</a></p>
+<p><a href='/cuisines'>Return to cuisine list</a></p>
+<p><a href='/'>Return to Main Page</a></p>
+
+</div>
+

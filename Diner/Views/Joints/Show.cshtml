@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+
+<h1>Joint Details: </h1>
+
+<h2>@Model["joint"].GetName()</h2>
+<h3>Cuisine: @Model["cuisine"].GetName()</h3>
+<h3>Notes: @Model["joint"].GetNotes()</h3>
+
+
+<a href='/cuisines/@Model["cuisine"].GetId()/joints/@Model["joint"].GetId()/edit'>Edit this Joint</a>
+<br>
+<a href='/cuisines/@Model["cuisine"].GetId()/joints/new'>Add a new joint</a>
+<br>
+<p><a href='/cuisines/@Model["cuisine"].GetId()/joints/@Model["joint"].GetId()/delete'>Delete this joint</a></p>
+<br>
+<a href='/cuisines'>View all cuisines</a>
+
+</div>
